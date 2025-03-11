@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "3aef9d0e-3634-4c67-932e-0dcad8629a36",
+		"name": "School Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42408231"
+	},
+	"item": [
+		{
+			"name": "/addSchool",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"IES Patkar\",\r\n  \"address\": \"Dombivli\",\r\n  \"latitude\": 12.9716,\r\n  \"longitude\": 77.5946\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listSchools?latitude=12.9716&longitude=77.5946",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "12.9716"
+						},
+						{
+							"key": "longitude",
+							"value": "77.5946"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "2nd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"St.Marys\",\r\n  \"address\": \"Mumbaii\",\r\n  \"latitude\": 13.9716,\r\n  \"longitude\": 74.5946\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
